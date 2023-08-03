@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:send_off/main_view.dart';
-
-import '../../../../widgets/ui/cardtiles_bs2.dart';
+import 'package:send_off/widgets/ui/cardtiles_bs2.dart';
 
 class BoardingScreen2View extends StatelessWidget {
   const BoardingScreen2View({super.key});
@@ -14,10 +13,11 @@ class BoardingScreen2View extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.only(left: 16, right: 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                SizedBox(height: height * 0.1),
                 const Text(
                   'How can we help you Today?',
                   style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),

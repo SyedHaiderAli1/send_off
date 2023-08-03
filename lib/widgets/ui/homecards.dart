@@ -18,7 +18,7 @@ class CardTileHome extends StatelessWidget {
         borderRadius: BorderRadius.circular(
             10.0), // Adjust the circular border radius as needed
       ),
-      color: const Color(0xffC3F2CB),
+      color: const Color(0xffC7C7F1),
       child: Container(
         alignment: Alignment.center,
         height: height * 0.08,

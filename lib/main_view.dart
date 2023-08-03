@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:send_off/app/modules/home/views/home_view.dart';
 import 'package:send_off/dummy_screens/cart.dart';
 import 'package:send_off/dummy_screens/categories.dart';
 import 'package:send_off/dummy_screens/profile.dart';
 import 'package:send_off/dummy_screens/search.dart';
-
-import '../../app/modules/home/views/home_view.dart';
 
 class MainAppScreen extends StatefulWidget {
   @override
@@ -25,50 +24,55 @@ class _MainAppScreenState extends State<MainAppScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _screens[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (int index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Colors.black,
+      bottomNavigationBar: Theme(
+        data: Theme.of(context).copyWith(
+          canvasColor: const Color(0xFFF0F0F0), // Set the background color here
+        ),
+        child: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          onTap: (int index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: Colors.black,
+              ),
+              label: 'Home',
             ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-              color: Colors.black,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                color: Colors.black,
+              ),
+              label: 'Search',
             ),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.category_rounded,
-              color: Colors.black,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.category_rounded,
+                color: Colors.black,
+              ),
+              label: 'Categories',
             ),
-            label: 'Categories',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person_2_rounded,
-              color: Colors.black,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person_2_rounded,
+                color: Colors.black,
+              ),
+              label: 'Profile',
             ),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.shop_2_rounded,
-              color: Colors.black,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.shop_2_rounded,
+                color: Colors.black,
+              ),
+              label: 'Cart',
             ),
-            label: 'Cart',
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

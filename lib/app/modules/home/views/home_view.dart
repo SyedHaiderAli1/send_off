@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:send_off/widgets/ui/drawer.dart';
-
-import '../../../../widgets/ui/homecards.dart';
-import '../../../../widgets/ui/searchbar.dart';
+import 'package:send_off/widgets/ui/homecards.dart';
+import 'package:send_off/widgets/ui/searchbar.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -17,13 +16,13 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.sizeOf(context).height;
-    var width = MediaQuery.sizeOf(context).width;
+    //var width = MediaQuery.sizeOf(context).width;
     return MaterialApp(
       home: Scaffold(
         key: _scaffoldKey, // Assign the GlobalKey to the Scaffold
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Color(0xFFF0F0F0),
+          backgroundColor: const Color(0xFFF0F0F0),
           title: const Text('Product Categories',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -89,6 +88,7 @@ class _HomeViewState extends State<HomeView> {
                 rightIcon: Icons.arrow_forward_ios_rounded,
                 title: 'Other Products',
               ),
+              SizedBox(height: height * 0.05),
             ],
           ),
         ),

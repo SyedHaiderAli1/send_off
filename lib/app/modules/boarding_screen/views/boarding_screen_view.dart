@@ -37,7 +37,7 @@ class BoardingScreenView extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: height * 0.07),
+                  SizedBox(height: height * 0.05),
                   SizedBox(
                     width: width * 0.8,
                     height: height * 0.07,
